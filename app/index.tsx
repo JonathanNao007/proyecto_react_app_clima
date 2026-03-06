@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "react-native";
-import { AboutView } from "./AboutView";
+import { HomeView } from "./HomeView";
 
 export default function Index() {
   return (
     <View style={styles.container}>    
-      {/* <HomeView/> */}
-      <AboutView/>
+      <HomeView/>
+      {/* <AboutView/> */}
     </View>
   );
 }
