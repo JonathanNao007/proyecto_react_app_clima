@@ -63,7 +63,7 @@ export function HomeView(){
                 <ImagenClima momento={valorDiaNoche}></ImagenClima>
             </ScrollView>
             <View style={styles.bottom}>
-                <Button title="Modo Oscuro" action={context.toggleModo}></Button>
+                <Button title={context.isModoOscuro ? 'Modo Claro' : 'Modo Oscuro'} action={context.toggleModo}></Button>
                 {/* <Etiqueta alin='right'>Ecerca de esta App</Etiqueta> */}
                 {/* <Button title="Ecerca de esta App" action={()=> alert('Ejecutando, Acerca de esta app.')}></Button> */}
                 <Button title="Ecerca de esta App" action={()=> router.push("/AboutView")}></Button>
