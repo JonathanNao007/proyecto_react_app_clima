@@ -1,4 +1,6 @@
-import { Text } from "react-native";
+import { AppContext } from "@/context/AppContext";
+import { useContext } from "react";
+import { StyleSheet, Text } from "react-native";
 
 interface IEtiqueta{
     alinear? : string,
@@ -6,10 +8,14 @@ interface IEtiqueta{
 }
 
 export function Etiqueta(props){
+    const context = useContext(AppContext)
     const alin = props.alin ? props.alin : 'center'
-    return <Text style={
-        {
+    const style = StyleSheet.create({
+        text : {
             padding : 10,
-            textAlign : alin
-        }}>{props.children}</Text>
+            textAlign : alin,
+            color: context.getTextColor()}
+    })
+
+    return <Text style={style.text}>{props.children}</Text>
 }
